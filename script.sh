@@ -36,7 +36,7 @@ echo "==> Настройка Keepalived (VRRP VIP)..."
 cat <<EOF > /etc/keepalived/keepalived.conf
 vrrp_instance VI_1 {
     state MASTER
-    interface eth0
+    interface ens3
     virtual_router_id 51
     priority $PRIORITY
     virtual_ipaddress {
